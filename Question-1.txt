@@ -1,0 +1,58 @@
+Question-1
+Write a “person” class to hold all the details.
+
+class Person {
+  constructor(name, age, gender) {
+    this.name = name;
+    this.age = age;
+    this.gender = gender;
+  }
+
+  introduce() {
+    console.log(`Hello, my name is ${this.name}. I am ${this.age} years old and identify as ${this.gender}.`);
+  }
+
+  celebrateBirthday() {
+    this.age++;
+    console.log(`Happy birthday to me! Now I am ${this.age} years old.`);
+  }
+}
+
+// Example usage:
+const john = new Person("John Doe", 25, "male");
+john.introduce(); // Output: Hello, my name is John Doe. I am 25 years old and identify as male.
+john.celebrateBirthday(); // Output: Happy birthday to me! Now I am 26 years old.
+
+Question-2
+write a class to calculate the uber price.
+
+class UberPriceCalculator {
+  constructor(distance, duration) {
+    this.distance = distance;
+    this.duration = duration;
+  }
+
+  calculatePrice() {
+    const baseFare = 2.5;
+    const costPerMile = 1.5;
+    const costPerMinute = 0.25;
+
+    const distanceCost = this.distance * costPerMile;
+    const durationCost = this.duration * costPerMinute;
+
+    const totalPrice = baseFare + distanceCost + durationCost;
+
+    return totalPrice;
+  }
+}
+
+const distance = 10; // in miles
+const duration = 20; // in minutes
+
+const priceCalculator = new UberPriceCalculator(distance, duration);
+const totalPrice = priceCalculator.calculatePrice();
+
+console.log(`Total price for the Uber ride: $${totalPrice}`);
+Output:
+
+Total price for the Uber ride: $32.5
