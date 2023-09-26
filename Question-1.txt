@@ -1,6 +1,5 @@
 Question-1
-Write a “person” class to hold all the details.
-
+/Write a “person” class to hold all the details.
 class Person {
   constructor(name, age, gender) {
     this.name = name;
@@ -24,8 +23,7 @@ john.introduce(); // Output: Hello, my name is John Doe. I am 25 years old and i
 john.celebrateBirthday(); // Output: Happy birthday to me! Now I am 26 years old.
 
 Question-2
-write a class to calculate the uber price.
-
+/write a class to calculate the uber price.
 class UberPriceCalculator {
   constructor(distance, duration) {
     this.distance = distance;
